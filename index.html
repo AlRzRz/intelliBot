@@ -39,51 +39,118 @@
 		<form action="" id="tickerForm">
 			<div class="formOrient">
 				<label for="name">Ticker</label>
-				<input type="text" name="ticker" id="tickerInput" />
+				<input type="text" name="ticker" id="tickerInput" placeholder="e.g. AAPL"/>
 				<input type="submit" value="Search">
 			</div>
 		</form>
 	</div>
-	<div class="financialSection">
-		<h1>Financial</h1>
-		<table>
-			<thead>
-				<tr>
-					<th>2024</th>
-					<th>2023</th>
-					<th>2022</th>
-				</tr>
-			</thead>
-			<tbody>
-				
-			</tbody>
-		</table>
-	</div>
-	<div class="sentimentSection">
-		<h1>Sentiment</h1>
-		<table>
-			<thead>
-				<tr>
-					<th>2024</th>
-					<th>2023</th>
-					<th>2022</th>
-				</tr>
-			</thead>
-			<tbody>
-				
-			</tbody>
-		</table>
-	</div>
-	<div class="scoringSection">
-		<h1>Scoring</h1>
-		<table>
-			<thead>
-
-			</thead>
-			<tbody>
-
-			</tbody>
-		</table>
+	<div class="sectionsContainer">
+		<div class="financialSection">
+			<h1>Financial</h1>
+			<table>
+				<thead>
+					<tr>
+						<th>Metric</th>
+						<th>2024</th>
+						<th>2023</th>
+						<th>2022</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Rev. Growth (YoY)</td>
+						<td class="positive">+15.2%</td>
+						<td class="positive">+12.8%</td>
+						<td class="positive">+8.5%</td>
+					</tr>
+					<tr>
+						<td>EPS</td>
+						<td class="positive">$4.25</td>
+						<td class="positive">$3.85</td>
+						<td class="positive">$3.20</td>
+					</tr>
+					<tr>
+						<td>Free Cash Flow</td>
+						<td class="positive">$12.5B</td>
+						<td class="positive">$10.8B</td>
+						<td class="positive">$9.2B</td>
+					</tr>
+					<tr>
+						<td>P/E Ratio</td>
+						<td class="neutral">24.5</td>
+						<td class="neutral">22.8</td>
+						<td class="neutral">20.1</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<div class="sentimentSection">
+			<h1>Sentiment</h1>
+			<table>
+				<thead>
+					<tr>
+						<th>Metric</th>
+						<th>2024</th>
+						<th>2023</th>
+						<th>2022</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Tweet Volume</td>
+						<td class="positive">1.2M</td>
+						<td class="positive">950K</td>
+						<td class="positive">750K</td>
+					</tr>
+					<tr>
+						<td>Sentiment Score</td>
+						<td class="positive">0.75</td>
+						<td class="neutral">0.45</td>
+						<td class="negative">-0.15</td>
+					</tr>
+					<tr>
+						<td>News Sentiment</td>
+						<td class="positive">0.82</td>
+						<td class="positive">0.65</td>
+						<td class="neutral">0.35</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<div class="scoringSection">
+			<h1>Scoring</h1>
+			<table>
+				<thead>
+					<tr>
+						<th>Category</th>
+						<th>Score</th>
+						<th>Weight</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Financial Health</td>
+						<td class="positive">85/100</td>
+						<td>40%</td>
+					</tr>
+					<tr>
+						<td>Market Sentiment</td>
+						<td class="positive">78/100</td>
+						<td>30%</td>
+					</tr>
+					<tr>
+						<td>Growth Potential</td>
+						<td class="positive">82/100</td>
+						<td>30%</td>
+					</tr>
+					<tr>
+						<td><strong>Overall Score</strong></td>
+						<td class="positive"><strong>82/100</strong></td>
+						<td>100%</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
 	</div>
 </body>
 </html>
