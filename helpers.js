@@ -31,7 +31,3 @@ export default class fetchWrapper {
         .then(response => response.json());
     }
 }
-
-export const chartFormat = `
-
-`

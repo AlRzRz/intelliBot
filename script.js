@@ -1,5 +1,4 @@
 import { getMainData } from './api.js';
-import { chartFormat } from './helpers.js';
 
 const cName = document.querySelector('#companyName');
 const cMcap = document.querySelector('#companyMcap');
@@ -19,28 +18,22 @@ const renderMainData = (data) => {
 }
 
 const renderChart = (ticker) => {
-    // Clear the container
-    stockWidgetContainer.innerHTML = '';
+    // Get the widget container
+    const widgetContainer = document.querySelector('.tradingview-widget-container');
     
-    // Create the widget container
-    const widgetContainer = document.createElement('div');
-    widgetContainer.className = 'tradingview-widget-container';
+    // Remove the old script
+    const oldScript = document.querySelector('#tradingview-widget-script');
+    if (oldScript) {
+        oldScript.remove();
+    }
     
-    // Create the widget element
-    const widgetElement = document.createElement('div');
-    widgetElement.className = 'tradingview-widget-container__widget';
-    
-    // Create the copyright element
-    const copyrightElement = document.createElement('div');
-    copyrightElement.className = 'tradingview-widget-copyright';
-    copyrightElement.innerHTML = '<a href="https://www.tradingview.com/" rel="noopener nofollow" target="_blank"><span class="blue-text">Track all markets on TradingView</span></a>';
-    
-    // Create the script element
-    const scriptElement = document.createElement('script');
-    scriptElement.type = 'text/javascript';
-    scriptElement.src = 'https://s3.tradingview.com/external-embedding/embed-widget-mini-symbol-overview.js';
-    scriptElement.async = true;
-    scriptElement.innerHTML = JSON.stringify({
+    // Create new script
+    const newScript = document.createElement('script');
+    newScript.id = 'tradingview-widget-script';
+    newScript.type = 'text/javascript';
+    newScript.src = 'https://s3.tradingview.com/external-embedding/embed-widget-mini-symbol-overview.js';
+    newScript.async = true;
+    newScript.innerHTML = JSON.stringify({
         "symbol": ticker,
         "width": "100%",
         "height": "100%",
@@ -53,13 +46,8 @@ const renderChart = (ticker) => {
         "chartOnly": false
     });
     
-    // Assemble the widget
-    widgetContainer.appendChild(widgetElement);
-    widgetContainer.appendChild(copyrightElement);
-    widgetContainer.appendChild(scriptElement);
-    
-    // Add to the page
-    stockWidgetContainer.appendChild(widgetContainer);
+    // Add the new script to the container
+    widgetContainer.appendChild(newScript);
 }
 
 const render = async () => {
@@ -68,6 +56,7 @@ const render = async () => {
 
 tickerForm.addEventListener('submit', event => {
     event.preventDefault();
+	
     const value = tickerInput.value.toUpperCase();
     console.log(value);
     renderChart(value);

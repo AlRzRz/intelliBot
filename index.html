@@ -50,7 +50,7 @@
 			<div class="tradingview-widget-container">
 				<div class="tradingview-widget-container__widget"></div>
 				<div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/" rel="noopener nofollow" target="_blank"><span class="blue-text">Track all markets on TradingView</span></a></div>
-				<script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-mini-symbol-overview.js" async>
+				<script id="tradingview-widget-script" type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-mini-symbol-overview.js" async>
 				{
 				"symbol": "AAPL",
 				"width": "100%",
@@ -71,35 +71,35 @@
 			<div class="keyStats">
 				<div class="statGroup">
 					<h3>Name</h3>
-					<p id="companyName">Apple Inc.</p>
+					<p id="companyName">--</p>
 				</div>
 				<div class="statGroup">
 					<h3>Market Cap</h3>
-					<p id="companyMcap">$2.8T</p>
+					<p id="companyMcap">--</p>
 				</div>
 				<div class="statGroup">
 					<h3>Shares Outstanding</h3>
-					<p id="companyShares">15.7B</p>
+					<p id="companyShares">--</p>
 				</div>
 				<div class="statGroup">
 					<h3>Industry</h3>
-					<p id="companyIndustry">Technology</p>
+					<p id="companyIndustry">--</p>
 				</div>
 				<div class="statGroup">
 					<h3>Price</h3>
-					<p>$178.72</p>
+					<p id="companyPrice">--</p>
 				</div>
 				<div class="statGroup">
 					<h3>52 Week Range</h3>
-					<p>$124.17 - $198.23</p>
+					<p id="companyRange">--</p>
 				</div>
 				<div class="statGroup">
 					<h3>EPS</h3>
-					<p id="companyEPS">$6.15</p>
+					<p id="companyEPS">--</p>
 				</div>
 				<div class="statGroup">
 					<h3>P/E Ratio</h3>
-					<p id="companyPE">29.06</p>
+					<p id="companyPE">--</p>
 				</div>
 			</div>
 		</div>
@@ -119,27 +119,27 @@
 				<tbody>
 					<tr>
 						<td>Rev. Growth (YoY)</td>
-						<td class="positive">+15.2%</td>
-						<td class="positive">+12.8%</td>
-						<td class="positive">+8.5%</td>
+						<td id="revGrowth2024" class="positive">--</td>
+						<td id="revGrowth2023" class="positive">--</td>
+						<td id="revGrowth2022" class="positive">--</td>
 					</tr>
 					<tr>
 						<td>EPS</td>
-						<td class="positive">$4.25</td>
-						<td class="positive">$3.85</td>
-						<td class="positive">$3.20</td>
+						<td id="eps2024" class="positive">--</td>
+						<td id="eps2023" class="positive">--</td>
+						<td id="eps2022" class="positive">--</td>
 					</tr>
 					<tr>
 						<td>Free Cash Flow</td>
-						<td class="positive">$12.5B</td>
-						<td class="positive">$10.8B</td>
-						<td class="positive">$9.2B</td>
+						<td id="fcf2024" class="positive">--</td>
+						<td id="fcf2023" class="positive">--</td>
+						<td id="fcf2022" class="positive">--</td>
 					</tr>
 					<tr>
 						<td>P/E Ratio</td>
-						<td class="neutral">24.5</td>
-						<td class="neutral">22.8</td>
-						<td class="neutral">20.1</td>
+						<td id="pe2024" class="neutral">--</td>
+						<td id="pe2023" class="neutral">--</td>
+						<td id="pe2022" class="neutral">--</td>
 					</tr>
 				</tbody>
 			</table>
@@ -158,21 +158,21 @@
 				<tbody>
 					<tr>
 						<td>Tweet Volume</td>
-						<td class="positive">1.2M</td>
-						<td class="positive">950K</td>
-						<td class="positive">750K</td>
+						<td id="tweetVol2024" class="positive">--</td>
+						<td id="tweetVol2023" class="positive">--</td>
+						<td id="tweetVol2022" class="positive">--</td>
 					</tr>
 					<tr>
 						<td>Sentiment Score</td>
-						<td class="positive">0.75</td>
-						<td class="neutral">0.45</td>
-						<td class="negative">-0.15</td>
+						<td id="sentScore2024" class="positive">--</td>
+						<td id="sentScore2023" class="neutral">--</td>
+						<td id="sentScore2022" class="negative">--</td>
 					</tr>
 					<tr>
 						<td>News Sentiment</td>
-						<td class="positive">0.82</td>
-						<td class="positive">0.65</td>
-						<td class="neutral">0.35</td>
+						<td id="newsSent2024" class="positive">--</td>
+						<td id="newsSent2023" class="positive">--</td>
+						<td id="newsSent2022" class="neutral">--</td>
 					</tr>
 				</tbody>
 			</table>
@@ -190,22 +190,22 @@
 				<tbody>
 					<tr>
 						<td>Financial Health</td>
-						<td class="positive">85/100</td>
+						<td id="finHealthScore" class="positive">--</td>
 						<td>40%</td>
 					</tr>
 					<tr>
 						<td>Market Sentiment</td>
-						<td class="positive">78/100</td>
+						<td id="marketSentScore" class="positive">--</td>
 						<td>30%</td>
 					</tr>
 					<tr>
 						<td>Growth Potential</td>
-						<td class="positive">82/100</td>
+						<td id="growthScore" class="positive">--</td>
 						<td>30%</td>
 					</tr>
 					<tr>
 						<td><strong>Overall Score</strong></td>
-						<td class="positive"><strong>82/100</strong></td>
+						<td id="overallScore" class="positive"><strong>--</strong></td>
 						<td>100%</td>
 					</tr>
 				</tbody>

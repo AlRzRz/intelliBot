@@ -20,9 +20,9 @@ export const getMainData = async (ticker) => {
 
 
 export const getFinancialData = async(ticker) => {
-
+    
 }
 
 export const getSentimentData = async(ticker) => {
-    
+
 }
