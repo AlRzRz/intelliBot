@@ -181,4 +181,71 @@ h1 {
     font-size: clamp(0.75rem, 2vw, 0.875rem);
 }
 
+/* Key Stats Section */
+.basicInfo {
+    padding: 1rem;
+    max-width: 87.5rem;
+    margin: 0 auto;
+}
+
+.keyStats {
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+    gap: 1.5rem;
+    background-color: #141414;
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.2);
+    border: 0.0625rem solid rgba(255, 255, 255, 0.1);
+}
+
+.statGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.statGroup h3 {
+    color: rgba(230, 230, 230, 0.7);
+    font-size: 0.75rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.05rem;
+    margin: 0;
+}
+
+.statGroup p {
+    color: #e6e6e6;
+    font-size: 1.125rem;
+    font-weight: 500;
+    margin: 0;
+}
+
+/* Overview Container */
+.overviewContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 1rem;
+    max-width: 87.5rem;
+    margin: 0 auto;
+}
+
+.stockWidget {
+    flex: 1;
+    min-width: 18.75rem;
+    aspect-ratio: 16/9;
+}
+
+.tradingview-widget-container {
+    width: 100%;
+    height: 100%;
+}
+
+.basicInfo {
+    flex: 1;
+    min-width: 18.75rem;
+}
+
 
